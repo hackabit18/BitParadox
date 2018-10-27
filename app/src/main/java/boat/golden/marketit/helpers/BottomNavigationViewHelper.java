@@ -1,8 +1,5 @@
 package boat.golden.marketit.helpers;
 
-/**
- * Created by Vipin soni on 29-07-2018.
- */
 import android.annotation.SuppressLint;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;

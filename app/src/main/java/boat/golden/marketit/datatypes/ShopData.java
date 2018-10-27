@@ -1,9 +1,5 @@
 package boat.golden.marketit.datatypes;
 
-/**
- * Created by Vipin soni on 01-10-2018.
- */
-
 public class ShopData {
     String shop_name,pic_add,shop_id,short_desc;
     float lat,lon;

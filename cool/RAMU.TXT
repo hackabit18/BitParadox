@@ -1,0 +1,216 @@
+Configuration 'compile' in project ':app' is deprecated. Use 'implementation' instead.
+Configuration 'androidTestCompile' in project ':app' is deprecated. Use 'androidTestImplementation' instead.
+Configuration 'testCompile' in project ':app' is deprecated. Use 'testImplementation' instead.
+Could not find google-services.json while looking in [src/nullnull/debug, src/debug/nullnull, src/nullnull, src/debug, src/nullnullDebug]
+registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)
+Could not find google-services.json while looking in [src/nullnull/release, src/release/nullnull, src/nullnull, src/release, src/nullnullRelease]
+registerResGeneratingTask is deprecated, use registerGeneratedFolders(FileCollection)
+:app:dependencies
+
+------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+androidJacocoAgent - The Jacoco agent to use to get coverage data.
+\--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidJacocoAnt - The Jacoco ant tasks to use to get execute Gradle tasks.
+\--- org.jacoco:org.jacoco.ant:0.7.4.201502262128
+     +--- org.jacoco:org.jacoco.core:0.7.4.201502262128
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     +--- org.jacoco:org.jacoco.report:0.7.4.201502262128
+     |    +--- org.jacoco:org.jacoco.core:0.7.4.201502262128 (*)
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     \--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidTestAnnotationProcessor - Classpath for the annotation processor for 'androidTest'. (n)
+No dependencies
+
+androidTestApi - API dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestApk - Apk dependencies for 'androidTest' sources (deprecated: use 'androidTestRuntimeOnly' instead). (n)
+No dependencies
+
+androidTestCompile - Compile dependencies for 'androidTest' sources (deprecated: use 'androidTestImplementation' instead). (n)
+\--- com.android.support.test.espresso:espresso-core:2.2.2 (n)
+
+androidTestCompileOnly - Compile only dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestDebugAnnotationProcessor - Classpath for the annotation processor for 'androidTestDebug'. (n)
+No dependencies
+
+androidTestDebugApi - API dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugApk - Apk dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugRuntimeOnly' instead). (n)
+No dependencies
+
+androidTestDebugCompile - Compile dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugImplementation' instead). (n)
+No dependencies
+
+androidTestDebugCompileOnly - Compile only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugImplementation - Implementation only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugProvided - Provided dependencies for 'androidTestDebug' sources (deprecated: use 'androidTestDebugCompileOnly' instead). (n)
+No dependencies
+
+androidTestDebugRuntimeOnly - Runtime only dependencies for 'androidTestDebug' sources. (n)
+No dependencies
+
+androidTestDebugWearApp - Link to a wear app to embed for object 'androidTestDebug'. (n)
+No dependencies
+
+androidTestImplementation - Implementation only dependencies for 'androidTest' sources. (n)
++--- com.android.support.test.espresso:espresso-core:3.0.1 (n)
+\--- com.android.support.test:runner:1.0.1 (n)
+
+androidTestProvided - Provided dependencies for 'androidTest' sources (deprecated: use 'androidTestCompileOnly' instead). (n)
+No dependencies
+
+androidTestRuntimeOnly - Runtime only dependencies for 'androidTest' sources. (n)
+No dependencies
+
+androidTestUtil - Additional APKs used during instrumentation testing.
+No dependencies
+
+androidTestWearApp - Link to a wear app to embed for object 'androidTest'. (n)
+No dependencies
+
+annotationProcessor - Classpath for the annotation processor for 'main'. (n)
++--- com.github.bumptech.glide:compiler:4.6.1 (n)
+\--- com.github.bumptech.glide:compiler:4.8.0 (n)
+
+api - API dependencies for 'main' sources. (n)
+No dependencies
+
+apk - Apk dependencies for 'main' sources (deprecated: use 'runtimeOnly' instead). (n)
+No dependencies
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+compile - Compile dependencies for 'main' sources (deprecated: use 'implementation' instead).
++--- com.aurelhubert:ahbottomnavigation:2.0.4
+|    \--- com.android.support:design:25.0.0 -> 28.0.0
+|         +--- com.android.support:support-annotations:28.0.0
+|         +--- com.android.support:support-compat:28.0.0
+|         |    +--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:collections:28.0.0
+|         |    |    \--- com.android.support:support-annotations:28.0.0
+|         |    +--- android.arch.lifecycle:runtime:1.1.1
+|         |    |    +--- android.arch.lifecycle:common:1.1.1
+|         |    |    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|         |    |    +--- android.arch.core:common:1.1.1
+|         |    |    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|         |    |    \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|         |    \--- com.android.support:versionedparcelable:28.0.0
+|         |         +--- com.android.support:support-annotations:28.0.0
+|         |         \--- com.android.support:collections:28.0.0 (*)
+|         +--- com.android.support:support-core-ui:28.0.0
+|         |    +--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    +--- com.android.support:support-core-utils:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    +--- com.android.support:documentfile:28.0.0
+|         |    |    |    \--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:loader:28.0.0
+|         |    |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    |    +--- android.arch.lifecycle:livedata:1.1.1
+|         |    |    |    |    +--- android.arch.core:runtime:1.1.1
+|         |    |    |    |    |    +--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|         |    |    |    |    |    \--- android.arch.core:common:1.1.1 (*)
+|         |    |    |    |    +--- android.arch.lifecycle:livedata-core:1.1.1
+|         |    |    |    |    |    +--- android.arch.lifecycle:common:1.1.1 (*)
+|         |    |    |    |    |    +--- android.arch.core:common:1.1.1 (*)
+|         |    |    |    |    |    \--- android.arch.core:runtime:1.1.1 (*)
+|         |    |    |    |    \--- android.arch.core:common:1.1.1 (*)
+|         |    |    |    \--- android.arch.lifecycle:viewmodel:1.1.1
+|         |    |    |         \--- com.android.support:support-annotations:26.1.0 -> 28.0.0
+|         |    |    +--- com.android.support:localbroadcastmanager:28.0.0
+|         |    |    |    \--- com.android.support:support-annotations:28.0.0
+|         |    |    \--- com.android.support:print:28.0.0
+|         |    |         \--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:customview:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    \--- com.android.support:support-compat:28.0.0 (*)
+|         |    +--- com.android.support:viewpager:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    \--- com.android.support:customview:28.0.0 (*)
+|         |    +--- com.android.support:coordinatorlayout:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    \--- com.android.support:customview:28.0.0 (*)
+|         |    +--- com.android.support:drawerlayout:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    \--- com.android.support:customview:28.0.0 (*)
+|         |    +--- com.android.support:slidingpanelayout:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    \--- com.android.support:customview:28.0.0 (*)
+|         |    +--- com.android.support:interpolator:28.0.0
+|         |    |    \--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:swiperefreshlayout:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    |    \--- com.android.support:interpolator:28.0.0 (*)
+|         |    +--- com.android.support:asynclayoutinflater:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    \--- com.android.support:support-compat:28.0.0 (*)
+|         |    \--- com.android.support:cursoradapter:28.0.0
+|         |         \--- com.android.support:support-annotations:28.0.0
+|         +--- com.android.support:support-core-utils:28.0.0 (*)
+|         +--- com.android.support:support-fragment:28.0.0
+|         |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    +--- com.android.support:support-core-ui:28.0.0 (*)
+|         |    +--- com.android.support:support-core-utils:28.0.0 (*)
+|         |    +--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:loader:28.0.0 (*)
+|         |    \--- android.arch.lifecycle:viewmodel:1.1.1 (*)
+|         +--- com.android.support:transition:28.0.0
+|         |    +--- com.android.support:support-annotations:28.0.0
+|         |    \--- com.android.support:support-compat:28.0.0 (*)
+|         +--- com.android.support:appcompat-v7:28.0.0
+|         |    +--- com.android.support:support-annotations:28.0.0
+|         |    +--- com.android.support:support-compat:28.0.0 (*)
+|         |    +--- com.android.support:collections:28.0.0 (*)
+|         |    +--- com.android.support:cursoradapter:28.0.0 (*)
+|         |    +--- com.android.support:support-core-utils:28.0.0 (*)
+|         |    +--- com.android.support:support-fragment:28.0.0 (*)
+|         |    +--- com.android.support:support-vector-drawable:28.0.0
+|         |    |    +--- com.android.support:support-annotations:28.0.0
+|         |    |    \--- com.android.support:support-compat:28.0.0 (*)
+|         |    \--- com.android.support:animated-vector-drawable:28.0.0
+|         |         +--- com.android.support:support-vector-drawable:28.0.0 (*)
+|         |         \--- com.android.support:support-core-ui:28.0.0 (*)
+|         +--- com.android.support:cardview-v7:28.0.0
+|         |    \--- com.android.support:support-annotations:28.0.0
+|         \--- com.android.support:recyclerview-v7:28.0.0
+|              +--- com.android.support:support-annotations:28.0.0
+|              +--- com.android.support:support-compat:28.0.0 (*)
+|              \--- com.android.support:support-core-ui:28.0.0 (*)
++--- de.greenrobot:eventbus:2.4.0
++--- com.android.support:appcompat-v7:28.0.0 (*)
++--- com.android.support:design:28.0.0 (*)
++--- com.android.support.constraint:constraint-layout:1.0.2
+|    \--- com.android.support.constraint:constraint-layout-solver:1.0.2
++--- com.android.support:cardview-v7:28.0.0-alpha1 -> 28.0.0 (*)
+\--- com.android.support:recyclerview-v7:28.0.0 (*)
+
+compileOnly - Compile only dependencies for 'main' sources. (n)
+No dependencies
+
+debugAndroidTestAnnotationProcessorClasspath - Resolved configuration for annotation-processor for variant: debugAndroidTest
+No dependencies
+
+debugAndroidTestCompileClasspath - Resolved configuration for compilation for variant: debugAndroidTest
+:app:dependencies FAILED
+1 actionable task: 1 executed

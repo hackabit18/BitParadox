@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseUser currentfirebaseuser;
     String s;
-
+    SharedPreferences.Editor editor;
 
 
 
@@ -83,15 +83,14 @@ public class MainActivity extends AppCompatActivity {
         navview.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         BottomNavigationViewHelper.disableShiftMode(navview);
         sharedPreferences = this.getSharedPreferences("login", MODE_PRIVATE);
-        //SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor = sharedPreferences.edit();
         currentstatus = sharedPreferences.getString("islogin", "false");
-        Toast.makeText(this, currentstatus, Toast.LENGTH_SHORT).show();
+
         if (currentstatus.equals("false")) {
             Intent i = new Intent(this, login.class);
             startActivity(i);
         }
         currentstatus = sharedPreferences.getString("islogin", "false");
-        Toast.makeText(this, currentstatus, Toast.LENGTH_SHORT).show();
         fragment = new Home();
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
@@ -129,14 +128,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Ohhh You need Help", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.logout:
-                Toast.makeText(MainActivity.this, "Log Out" + " " + currentstatus, Toast.LENGTH_SHORT).show();
-                if (currentstatus.equals("false")) {
+                currentstatus = sharedPreferences.getString("islogin", "false");
+                Toast.makeText(MainActivity.this, "Logged Out" , Toast.LENGTH_SHORT).show();
+                if (!currentstatus.equals("true")) {
+                    item.setTitle("Login");
                     Intent i = new Intent(MainActivity.this, login.class);
                     startActivity(i);
-                    currentstatus = sharedPreferences.getString("islogin", "false");
                     Toast.makeText(this, currentstatus, Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "You r currently logged in", Toast.LENGTH_SHORT).show();
+                    item.setTitle("Log Out");
+
+                    FirebaseAuth.getInstance().signOut();
+                    editor.putString("islogin","false");
+                    editor.apply();
+                    Intent i = new Intent(MainActivity.this, login.class);
+                    startActivity(i);
                 }
 
                 break;

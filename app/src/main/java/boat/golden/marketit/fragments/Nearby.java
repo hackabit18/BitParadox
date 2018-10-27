@@ -15,10 +15,6 @@ import boat.golden.marketit.R;
 import boat.golden.marketit.adapters.ShopAdapter;
 import boat.golden.marketit.datatypes.ShopData;
 
-/**
- * Created by Vipin soni on 01-10-2018.
- */
-
 public class Nearby extends Fragment {
 
     RecyclerView recyclerView;

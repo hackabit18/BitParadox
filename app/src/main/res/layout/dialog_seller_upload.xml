@@ -106,10 +106,10 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Biscuits"
+                android:text="Snacks"
                 android:checked="false"
                 android:textSize="18sp"
-                android:id="@+id/bi"/>
+                android:id="@+id/sn"/>
 
             <RadioButton
             android:layout_width="match_parent"

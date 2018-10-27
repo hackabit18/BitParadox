@@ -270,7 +270,6 @@ FirebaseRecyclerAdapter<ProductData, viewHolder> firebaseRecyclerAdapter;
             public void onClick(DialogInterface dialog, int whichButton) {
 
 
-
                 final DatabaseReference livemart;
                 SharedPreferences prefs = SellerMainActivity.this.getSharedPreferences("login", Context.MODE_PRIVATE);
                 UID = prefs.getString("UID", "Random");
@@ -315,7 +314,6 @@ FirebaseRecyclerAdapter<ProductData, viewHolder> firebaseRecyclerAdapter;
                            public void onComplete(@NonNull Task<Uri> task) {
                                if (task.isSuccessful()) {
                                    Uri downloadUri = task.getResult();
-                                   Log.e("TAG", downloadUri.toString() );
                                    ProductData localdata=new ProductData(a.getText().toString(),b.getText().toString(),radioButton.getText().toString(),downloadUri.toString(),price.getText().toString());
 
                                 livemart.setValue(localdata, new DatabaseReference.CompletionListener() {
@@ -384,7 +382,7 @@ FirebaseRecyclerAdapter<ProductData, viewHolder> firebaseRecyclerAdapter;
 
 
 
-                        ProductData localdata=new ProductData(a.getText().toString(),b.getText().toString(),"NULL","NULL",price.getText().toString());
+                        ProductData localdata=new ProductData(a.getText().toString(),b.getText().toString(),radioButton.getText().toString(),"NULL",price.getText().toString());
 
                         livemart.setValue(localdata, new DatabaseReference.CompletionListener() {
                             @Override

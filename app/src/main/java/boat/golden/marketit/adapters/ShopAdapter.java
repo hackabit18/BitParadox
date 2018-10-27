@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import boat.golden.marketit.R;
 import boat.golden.marketit.datatypes.ShopData;
 
-/**
- * Created by Vipin soni on 01-10-2018.
- */
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.viewholder> {
 

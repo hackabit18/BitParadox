@@ -1,8 +1,5 @@
 package boat.golden.marketit.datatypes;
 
-/**
- * Created by Vipin soni on 01-10-2018.
- */
 
 public class ProductData
 {

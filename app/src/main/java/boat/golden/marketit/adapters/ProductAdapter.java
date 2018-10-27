@@ -1,9 +1,9 @@
 package boat.golden.marketit.adapters;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,32 +12,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import boat.golden.marketit.MainActivity;
+import boat.golden.marketit.Prod_Desc;
 import boat.golden.marketit.R;
 import boat.golden.marketit.datatypes.ProductData;
-import boat.golden.marketit.datatypes.ShopData;
-import boat.golden.marketit.fragments.Home;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
 
-/**
- * Created by Vipin soni on 01-10-2018.
- */
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.viewholder> {
 
     ArrayList<ProductData> data;
     Context context;
+    private final OnItemClickListener listener;
 
-
-    public ProductAdapter(ArrayList<ProductData> data,Context context) {
+    public ProductAdapter(ArrayList<ProductData> data,Context context, OnItemClickListener listener) {
         this.data = data;
         this.context=context;
+        this.listener = listener;
     }
 
     @Override
@@ -46,61 +42,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.viewhold
             holder.product_name.setText(data.get(position).getProduct_name());
             holder.product_desc.setText(data.get(position).getProduct_desc());
             holder.amount.setText(data.get(position).getPrice());
-        }
-        else {
-            holder.button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder builder=new AlertDialog.Builder(context);
-                    String[] items = new String[]{
-                            "Shirts",
-                            "jeans",
-                            "Watches",
-                            "Mobiles",
-                            "Sports",
-                            "Biscuits",
-                            "Chips",
-                            "Chargers",
-                            "Toys",
-                            "All Other"
-                    };
-
-                    final boolean[] checkedItems = new boolean[]{
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false,
-                            false
-
-                    };
-                    final List<String> itemList = Arrays.asList(items);
-                    builder.setMultiChoiceItems(items, checkedItems, new DialogInterface.OnMultiChoiceClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                            checkedItems[which] = isChecked;
-                            String currentItem = itemList.get(which);
-                        }
-                    });
-                    builder.setCancelable(false);
-                    builder.setTitle("Select Items").setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //blablablablablablablablabla
-                        }
-                    }).setNegativeButton("Cancel",null);
-                    AlertDialog dialog=builder.create();
-                    dialog.show();
-
-
-                }
-            });
+            holder.bind(data.get(position), listener);
         }
     }
+
     @Override
     public int getItemViewType(int position) {
         if(data.get(position).getProduct_type().equals("TOP_SEARCH")){return 1;}
@@ -146,8 +91,23 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.viewhold
             amount=itemView.findViewById(R.id.amount);
             image=itemView.findViewById(R.id.product_pic);
             button=itemView.findViewById(R.id.searchit);
+
+        }
+
+        public void bind(final ProductData item, final OnItemClickListener listener) {
+            //name.setText(item.name);
+            //Picasso.with(itemView.getContext()).load(item.imageUrl).into(image);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
         }
 
 
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(ProductData item);
     }
 }
