@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Home" android:icon="@drawable/ic_home_black_24dp" android:id="@+id/homee"/>
+    <item android:title="Fav" android:icon="@drawable/ic_favorite_black_24dp" android:id="@+id/favv"/>
+    <item android:title="Orders" android:icon="@drawable/ic_room_service_black_24dp" android:id="@+id/orderss"/>
+    <item android:title="Near By" android:icon="@drawable/ic_location_on_black_24dp" android:id="@+id/nearbyy"/>
+
+
+</menu>

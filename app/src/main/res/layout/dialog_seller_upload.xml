@@ -1,0 +1,171 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:gravity="center"
+    android:layout_margin="10sp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:theme="@style/AppTheme"
+    android:layout_marginBottom="10sp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="280sp"
+        android:layout_height="280sp"
+        android:padding="4dp"
+        android:id="@+id/imageview"
+        android:src="@drawable/search_background"
+        android:layout_gravity="center_horizontal"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:id="@+id/projectname"
+            android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/typespinner"
+            android:text="Category"
+
+            android:gravity="left"
+            android:textSize="16sp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rGrup"
+            android:visibility="gone"
+            >
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:checked="true"
+                android:textSize="18sp"
+                android:id="@+id/ot"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Shirts"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/sh"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jeans"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/je"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Watches"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/wh"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobiles"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/mo"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/sp"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biscuits"
+                android:checked="false"
+                android:textSize="18sp"
+                android:id="@+id/bi"/>
+
+            <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chargers"
+            android:checked="false"
+            android:textSize="18sp"
+            android:id="@+id/ch"/>
+            <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Toys"
+            android:checked="false"
+            android:textSize="18sp"
+            android:id="@+id/to"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Short Description"
+            android:id="@+id/projectdesc"
+            android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="Price"
+                android:inputType="number"
+                android:id="@+id/productprice"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>
