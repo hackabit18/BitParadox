@@ -142,7 +142,8 @@ public class Fav extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 100) {
+        if (requestCode == 100)
+        {
             if(sharedPreferences.getBoolean("cart", false)){
                 fav_Ref.child(user.getUid()).child("Orders").child(key).setValue("Ordered");
             }
