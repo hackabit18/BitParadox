@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:id="@+id/orders_parent_layout"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50sp"
+        android:scrollbars="vertical"
+                />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_height="50sp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#30344aa1"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount : "
+            android:layout_alignParentStart="true"
+            android:textSize="18dp"
+            android:id="@+id/ccc"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/ccc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/tot_amt"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/ic_attach_money_black_24dp"/>
+    </RelativeLayout>
+
+
+    </RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<android.support.v7.widget.CardView
+    android:id="@+id/loccc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15sp"
+    android:elevation="10sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#363234b7"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500m"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:layout_marginRight="110sp"
+            android:layout_toLeftOf="@+id/map_boundry"
+            android:layout_marginTop="8sp"
+            android:id="@+id/fragment_text"/>
+        <Button
+            android:layout_width="35sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/map_boundry"
+            android:background="@drawable/search_background"
+            android:layout_margin="3sp"
+            android:layout_marginRight="15sp"
+            android:paddingTop="5sp"
+            android:height="40sp"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/loccc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/prooo"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_nearby"
+            android:layout_margin="2sp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

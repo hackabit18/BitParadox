@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/cooler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="2sp">
+
+        <Button
+            android:id="@+id/map_boundry"
+            android:layout_width="35sp"
+            android:layout_marginRight="3sp"
+            android:layout_marginLeft="3sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_background"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            />
+
+        <Button
+            android:id="@+id/searchit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="3sp"
+            android:layout_marginRight="3sp"
+            android:background="@drawable/search_background"
+            android:drawableRight="@drawable/ic_search_black_24dp"
+            android:text="Search" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cooler"
+        android:background="#d3d3d3"/>
+
+
+</RelativeLayout>
